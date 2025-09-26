@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Contact</h2>
+<p>Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+<form action="https://formspree.io/f/xnngnkrp" method="post" class="mt-3">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input class="form-control" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input class="form-control" name="email" type="email" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Message</label>
+    <textarea class="form-control" name="message" rows="4" required></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Send</button>
+</form>
+{% endblock %}

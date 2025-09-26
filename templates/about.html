@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>About</h2>
+<p class="text-justify">{{ person.summary }}</p>
+
+<h4>Education</h4>
+<ul>
+  {% for ed in person.education %}
+    <li class="text-justify"><strong>{{ ed.degree }}</strong>, {{ ed.institute }} — {{ ed.grade }} ({{ ed.year }})</li>
+  {% endfor %}
+</ul>
+
+<h4 class="mt-4">Experience</h4>
+{% for e in person.experience %}
+  <div class="mb-3 text-justify">
+    <h5>{{ e.role }} <small class="text-muted">({{ e.period }})</small></h5>
+    <ul class="text-justify">
+      {% for b in e.bullets %}
+        <li>{{ b }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+{% endblock %}

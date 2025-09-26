@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Projects</h2>
+<div class="row">
+  {% for p in person.projects %}
+  <div class="col-md-12 mb-3 text-justify">
+    <h5>{{ p.name }} <small class="text-muted">— {{ p.meta }}</small></h5>
+    <p class="text-justify">{{ p.desc }} {% if p.link %}<a href="{{ p.link }}" target="_blank" class="btn btn-outline-primary btn-sm ms-2">Repo <i class="bi bi-box-arrow-up-right"></i></a>{% endif %}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

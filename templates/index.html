@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-3 text-center">
+    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="profile"
+      class="img-fluid rounded-circle mb-3">
+    <p>
+      <a class="btn" href="{{ person.linkedin }}">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a class="btn" href="{{ person.github }}">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="btn" href="mailto:{{ person.email }}">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </p>
+  </div>
+  <div class="col-md-9">
+    <h1>{{ person.name }}</h1>
+    <h5 class="text-muted">{{ person.title }}</h5>
+    <p class="text-justify">{{ person.summary }}</p>
+
+    <h4 class="mt-4">Skills</h4>
+    <p>
+      {% for s in person.skills %}
+      <span class="badge bg-secondary me-1">{{ s }}</span>
+      {% endfor %}
+    </p>
+
+    <h4 class="mt-4">Experience (excerpt)</h4>
+    {% for e in person.experience[:] %}
+    <div class="mb-3 text-justify">
+      <strong>{{ e.role }}</strong> <span class="text-muted">• {{ e.period }}</span>
+      <ul class="text-justify">
+        {% for b in e.bullets %}
+        <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
