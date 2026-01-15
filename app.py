@@ -14,14 +14,14 @@ PERSON = {
     "github": "https://github.com/ArghaKamalSamanta",
     "google_scholar": "https://scholar.google.com/citations?user=0kmgF3UAAAAJ&hl=en",
     "location": "IIT Kharagpur (Dept. of E & EC)",
-    "summary": "B.Tech in Electronics & Electrical Communication Engineering + M.Tech in Vision & Intelligent Systems. AI / ML engineer with internship & research experience in LLM systems, on-device inference, and applied ML in vision, health & finance.",
+    "summary": "B.Tech in Electronics & Electrical Communication Engineering + M.Tech in Vision & Intelligent Systems. AI / ML engineer with internship & research experience in LLM systems, multimodal alignment, on-device inference, and applied ML in vision, health & finance.",
     # Quick lists for template rendering
     "skills": [
-        "Python", "C", "C++", "Matlab", "PyTorch", "TensorFlow", "HuggingFace", "LangChain", "Pandas",
+        "Python", "C", "C++", "Matlab", "PyTorch", "TensorFlow", "HPC", "HuggingFace", "LangChain", "Pandas",
         "Scikit-learn", "OpenCV", "Flask", "Matplotlib", "XGBoost", "ONNX"
     ],
     "education": [
-        {"degree": "B.Tech + M.Tech", "institute": "Indian Institute of Technology Kharagpur", "grade": "8.62/10", "year": "2026"},
+        {"degree": "B.Tech + M.Tech", "institute": "Indian Institute of Technology Kharagpur", "grade": "9.02/10", "year": "2026"},
         {"degree": "XII (WBCHSE)", "institute": "Ramakrishna Mission Vidyapith Purulia", "grade": "96.20%", "year": "2021"},
         {"degree": "X (WBBSE)", "institute": "Ramakrishna Mission Vidyapith Purulia", "grade": "95.57%", "year": "2019"},
     ],
@@ -170,5 +170,6 @@ def health():
 if __name__ == "__main__":
     # For local dev only; Render will use gunicorn
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
 
