@@ -7,7 +7,7 @@ app.secret_key = os.environ.get("FLASK_SECRET", "replace_this_with_env_secret")
 # ---------- Data pulled from resume (editable) ----------
 PERSON = {
     "name": "Argha Kamal Samanta",
-    "title": "AI / ML Researcher • Final year Student at IIT Kharagpur",
+    "title": "AI / ML Researcher • Final year Student at the Indian Institute of Technology Kharagpur",
     "email": "arghakamal25@gmail.com",
     "phone": "+91 xxx-xxx-xxxx",
     "linkedin": "https://linkedin.com/in/argha-kamal-samanta-38644b237/",
@@ -170,6 +170,7 @@ def health():
 if __name__ == "__main__":
     # For local dev only; Render will use gunicorn
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
 
 
