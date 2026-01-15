@@ -4,8 +4,9 @@
 <ul>
   {% for pub in person.publications %}
     <li class="text-justify"><strong>{{ pub.title }}</strong> — {{ pub.meta }} <br/><em>{{ pub.authors }}</em> 
-      <p><strong><em>Abstract: </em></strong>{{pub.abstract}} {% if pub.link and pub.link != "#" %} <a href="{{ pub.link }}" target="_blank" class="btn btn-outline-primary btn-sm ms-2">paper <i class="bi bi-box-arrow-up-right"></i></a>{% endif %}</p>
+      <p><strong><em>Abstract: </em></strong>{{pub.abstract}} {% if pub.link and pub.link != "#" %} <a href="{{ pub.link }}" target="_blank" class="btn btn-outline-primary btn-sm ms-2">Paper<i class="bi bi-box-arrow-up-right"></i></a>{% endif %}</p>
     </li>
   {% endfor %}
 </ul>
 {% endblock %}
+
