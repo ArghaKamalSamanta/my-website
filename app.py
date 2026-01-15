@@ -12,6 +12,7 @@ PERSON = {
     "phone": "+91 xxx-xxx-xxxx",
     "linkedin": "https://linkedin.com/in/argha-kamal-samanta-38644b237/",
     "github": "https://github.com/ArghaKamalSamanta",
+    "google_scholar": "https://scholar.google.com/citations?user=0kmgF3UAAAAJ&hl=en",
     "location": "IIT Kharagpur (Dept. of E & EC)",
     "summary": "B.Tech in Electronics & Electrical Communication Engineering + M.Tech in Vision & Intelligent Systems. AI / ML engineer with internship & research experience in LLM systems, on-device inference, and applied ML in vision, health & finance.",
     # Quick lists for template rendering
@@ -169,4 +170,5 @@ def health():
 if __name__ == "__main__":
     # For local dev only; Render will use gunicorn
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
 
